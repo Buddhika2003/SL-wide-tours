@@ -437,3 +437,62 @@ body {
     font-size: 24px;
   }
 }
+/* SCROLL TRANSITIONS */
+
+/* Hero: Fade + Slide Down */
+.hero-section {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Contact: Fade + Slide Right */
+.contact-section {
+  opacity: 0;
+  transform: translateX(120px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Show when visible */
+.hero-section.show,
+.contact-section.show {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Floating buttons */
+.down-btn,
+.up-btn {
+  animation: floatBtn 2s ease-in-out infinite;
+}
+
+@keyframes floatBtn {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Hover effects */
+.award-img,
+.founder-img,
+.small-logo {
+  transition: transform 0.4s ease;
+}
+
+.award-img:hover,
+.founder-img:hover,
+.small-logo:hover {
+  transform: scale(1.06);
+}
+
+.detail-box {
+  transition: transform 0.3s ease;
+}
+
+.detail-box:hover {
+  transform: translateX(8px);
+}
